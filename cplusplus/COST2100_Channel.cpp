@@ -191,3 +191,10 @@ void COST2100_Channel::loadChannel() {
 }
 
 }
+
+int main(){
+	// Just to verify the given code is working
+	using namespace std;
+	cout << "mohit";
+	return 0;
+}

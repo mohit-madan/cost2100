@@ -453,7 +453,7 @@ protected:
 	// angular spread
 	double mu_phi_BS;						//!< mean of AoD spread			(degree)
 	double sigma_phi_BS;					//!< std. of AoD spread			(degree)
-	double mu_theta_BS;					Cluster	//!< mean of EoD spread			(degree)
+	double mu_theta_BS;					//Cluster	//!< mean of EoD spread			(degree)
 	double sigma_theta_BS;					//!< std. of EoD spread			(degree)
 	double mu_phi_MS;						//!< mean of AoA spread			(degree)
 	double sigma_phi_MS;					//!< std. of AoA spread			(degree)

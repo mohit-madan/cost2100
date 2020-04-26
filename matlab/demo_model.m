@@ -80,14 +80,18 @@
 % Choose a Network type out of 
 % {'IndoorHall_5GHz','SemiUrban_300MHz','Indoor_CloselySpacedUser_2_6GHz','SemiUrban_CloselySpacedUser_2_6GHz','SemiUrban_VLA_2_6GHz'}
 % to parameterize the COST2100 model
-Network = 'Indoor_CloselySpacedUser_2_6GHz';
+
+%Network = 'Indoor_CloselySpacedUser_2_6GHz';
+Network = 'IndoorHall_5GHz';
 % In COST2100, # links = # BSs x # MSs
 % Set Link type to `Multiple' if you work with more than one link
 % Set Link type to `Single' otherwise
-Link = 'Multiple';
+%Link = 'Multiple';
+Link = 'Single';
 % Choose an Antenna type out of
 % {'SISO_omni', 'MIMO_omni', 'MIMO_dipole', 'MIMO_measured', 'MIMO_Cyl_patch', 'MIMO_VLA_omni'}
-Antenna = 'MIMO_Cyl_patch';
+%Antenna = 'MIMO_Cyl_patch';
+Antenna = 'MIMO_dipole';
 % ...and type of channel: {'Wideband','Narrowband'}.
 Band = 'Wideband';
 
@@ -400,8 +404,8 @@ switch Antenna
                 % Channel transfer function for a theoretical dipole 2-by-2 linear antenna array
                 % Generate the theoretical dipole antenna array, number of
                 % antennas is changeable
-                Ntx = 2;
-                Nrx = 2;
+                Ntx = 32;
+                Nrx = 1;
                 [Gtx, Grx] = get_dipole_G(Ntx,Nrx);        
                 txRot = [0,0]; % Rotation of the antenna array [azi,ele]
                 rxRot = [0,0];
